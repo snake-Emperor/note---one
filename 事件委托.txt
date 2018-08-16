@@ -1,0 +1,16 @@
+가가가가가가가가가가가가 가가가가가가가가가가가가가가가가가가가 가가가가가가a<body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+    <script type="text/javascript">
+   var ul = document.getElementsByTagName('ul')[0];
+   ul.onclick = function(e){
+   var event= e || window.event;
+   var target = event.target || event.srcElement;
+   console.log(target.innerText);
+ }
+  </script>
+  </body>

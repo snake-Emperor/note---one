@@ -1,0 +1,12 @@
+<script>
+     var obj={
+      name :'asd',
+      age:123,
+      sex :'male'
+     }
+     var obj1={}
+     function clone(origin, target){
+     for(var prop in origin){
+      target[prop] = origin[prop];}
+   }
+clone(obj,obj1);

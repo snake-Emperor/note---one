@@ -1,0 +1,36 @@
+<script type="text/javascript">
+     var target = target || {},
+     var toStr = Object.prototype.toString,
+     var arrStr = "[object Array]";
+     for(var prop in origin){
+      if(origin.hasOwnProperty(prop)){
+        if(origin[prop] !== "null" && typeof(origin[prop]) == 'object'){
+          if(toStr.call(origin[prop]) == arrStr){
+            target[prop] = [];
+          }else{
+            target[prop] = {};
+          }
+          deepClone(origin[prop],target[prop]);
+        }else{
+          target[prop] = origin[prop];
+        }
+      }
+     }
+return target;
+}
+
+
+
+
+//
+function clone(obj) {
+  var o = obj instanceof Array ? [] : {};
+  for(var k in obj) 
+    o[k] = typeof obj[k] === Object ? clone(obj[k]) : obj[k];
+  return o;
+}
+
+var a = [[1, 2, 3], [4, 5, 6, 7]];
+var b = clone(a);
+console.log(b);
+    </script>

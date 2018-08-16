@@ -1,0 +1,5 @@
+ var reg = /-(\w)/g;
+      var str = "the-first-name";
+      console.log(str.replace(reg, function($,$1){
+        return $1.toUpperCase();
+      }));

@@ -1,0 +1,22 @@
+ <button class="active">111</button>
+    <button class="active">222</button>
+    <button class="active">333</button>
+    <div class="content" style="display: block;"><p>腾讯</p></div>
+    <div class="content"><p>阿里</p></div>
+    <div class="content"><p>百度</p></div>
+    <script type="text/javascript">
+      var btn = document.getElementsByTagName('button');
+      var div = document.getElementsByClassName('content');
+for(var i = 0; i<btn.length; i++){
+      (function(n){
+        btn[n].onclick = function () {
+          for( var j =0; j< btn.length; j++){
+            btn[j].className = "";
+            div[j].style.display = "none";
+          }
+          this.className = "active";
+          div[n].style.display ="block";
+        }
+      }(i))
+    }
+    </script>

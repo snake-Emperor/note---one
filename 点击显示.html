@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+<p>点击这里查看输入对话框</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"><p>
+<script>
+function myFunction(){
+var x;
+var person=prompt("请输入你的名字","我最强");
+if(person !=null&&person !="")
+{
+x="老子天下第一"+person+"你算老几";
+document.getElementById("demo").innerHTML=x;
+}
+}
+</script>
+</body>
+</html>

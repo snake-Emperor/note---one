@@ -1,0 +1,2 @@
+var score=parseInt(window.promit('input'));
+document.write(score);

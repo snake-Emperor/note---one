@@ -1,0 +1,14 @@
+ //Ê¥±­Ä£Ê½
+       function inherit(Target,Origin){
+           function F(){}
+               F.prototype= Target.prototype;
+               Origin.prototype= new F();
+               Target.prototype.constuctor =Target;
+               Target.prototype.uber = Origin.prototype;
+       }
+       Father.prototype.lastName = "deng";
+       function Father(){}
+       function Son(){}
+       var father = new Father();
+       var son =new Son();
+       inherit(Son,Father); 
